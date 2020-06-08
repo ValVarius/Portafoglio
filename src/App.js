@@ -2,8 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Portfolio from './pages/Portfolio';
-import Contacts from './pages/Contacts';
 import "./portfolio.css"
 
 function App() {
@@ -20,11 +18,11 @@ function App() {
     </Route>
 
     <Route exact path="/portfolio">
-      <Portfolio/>
+      <Home/>
     </Route>
 
     <Route exact path="/contacts">
-      <Contacts/>
+      <Home/>
     </Route>
 
     </Switch>

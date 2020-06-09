@@ -9,19 +9,19 @@ body{
     color: black;
 }
 
-
-
-
-.container {
+.container-fluid {
     margin-top: 1%;
     /* background-color: #A22E37; */
+    /* box-shadow: 1px 5px 5px black; */
     
-    /* width: 80%; */
+    width: 90%;
+    height: 90%;
 }
 .card {
-    height:70vh;
+    /* height:70vh; */
     background-color: #A22E37;
     border-radius: 25px;
+    box-shadow: 1px 5px 5px black;
 }
 .card-title{
     
@@ -35,25 +35,20 @@ body{
     font-size: large;
 }
 
-#profile {
-    background-size: contain;
-    background-repeat: no-repeat;
-
-}
-.col-4 {
+/* .col-4 {
     
     background-repeat: no-repeat;
     height: 200px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-img {
+} */
+/* img {
     height: 100%;
     width: 100%;
-}
+} */
 
-.button{
+/* .button{
     
         background-color: blue;
         border: none;
@@ -66,7 +61,7 @@ img {
         margin: 100px 2px;
         cursor: pointer;
     
-}
+} */
 
 
  form {

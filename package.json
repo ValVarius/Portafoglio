@@ -3,24 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "engines": {
-    "node":"12.16.0",
+    "node": "12.16.0",
     "npm": "6.13.4"
   },
   "main": "index.js",
+  "author": "Valerio Varani",
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild":      "NPM_CONFIG_PRODUCTION=false npm install --prefix client        && npm run build --prefix client" 
-   },
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client        && npm run build --prefix client"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ValVarius/Portafoglio-.git"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ValVarius/Portafoglio-/issues"

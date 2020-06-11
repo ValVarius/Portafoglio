@@ -2,10 +2,7 @@
   "name": "Portafoglio",
   "version": "1.0.0",
   "description": "",
-  "engines": {
-    "node": "12.16.0",
-    "npm": "6.13.4"
-  },
+  
   "main": "index.js",
   "author": "Valerio Varani",
   "scripts": {

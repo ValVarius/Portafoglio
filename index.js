@@ -2,6 +2,8 @@ const express = require ('express')
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer')
 const app = express()
+const path = require('path');
+const PORT = process.env.PORT || 3001
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false}))
@@ -19,15 +21,6 @@ app.post('/api/form', (req,res) => {
         <h3>Message</h3>
         <p>${req.body.mailState.message}</p>
         `
-
-        // const transporter = nodemailer.createTransport({
-        //     host: 'smtp.ethereal.email',
-        //     port: 587,
-        //     auth: {
-        //         user: 'carole.nicolas@ethereal.email',
-        //         pass: 'tS8wxkC1qC6QRNBYgg'
-        //     }
-        // });
 
         var transporter = nodemailer.createTransport({
             service: 'gmail',
@@ -70,7 +63,16 @@ app.post('/api/form', (req,res) => {
     
 })
 
-const PORT = process.env.PORT || 3001
+
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static( 'CLIENT/build'));
+
+  app.get('*', (req,res) =>{
+    res.sendFile(path.join(__dirname,'CLIENT', 'build', 'index.html'));
+  });
+}
+
 
 app.listen(PORT, () =>{
     console.log(`Server listening on port ${PORT}`);
